@@ -1,0 +1,36 @@
+/* Add this to your styles.css or in the component's style file */
+.navbar-class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Change the background color as needed */
+    padding: 10px;
+  }
+  
+  .navbar-brand,
+  .navbar-nav.horizontal-nav .nav-link {
+    font-size: 18px; /* Change the font size as needed */
+    color: #fff; /* Change the text color as needed */
+    text-decoration: none;
+  }
+  
+  .navbar-brand:hover,
+  .navbar-nav.horizontal-nav .nav-link:hover {
+    text-decoration: underline; /* Change the underline style as needed */
+  }
+  
+  .navbar-nav.horizontal-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-nav.horizontal-nav .nav-item {
+    margin-right: 15px; /* Adjust the spacing between items as needed */
+  }
+  
+  .navbar-nav.horizontal-nav .nav-item:last-child {
+    margin-right: 0; /* Remove the margin for the last item */
+  }
+  

@@ -1,0 +1,35 @@
+<button (click)="showStudents()">Show Students</button>
+<h1>Student List is:</h1>
+
+<table *ngIf="students.length>0">
+  <thead>
+    <tr>
+      <th>Roll Number</th>
+      <th>Names</th>
+      <th>Attempts</th>
+      <th>Percentage</th>
+      <th>Subjects</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let s of students">
+      <td>{{s.rollno}}</td>
+      <td>{{s.name}}</td>
+      <td>{{s.numberOfAttempts}}</td>
+      <td>{{s.percentage}}</td>
+      <td>
+        <ul>
+          <li *ngFor="let subject of s.subjectsLearning">{{subject}}</li>
+        </ul>
+      </td>
+      <td>
+        <button class="btnDelete" (click) = "deleteStudent(s.rollno)">Delete</button>&nbsp;
+        <button (click) = "updateStudent(s)">Update</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span [class]="colorclass">{{deleteMessage}}</span>
+<app-sort-criteria (sortCriteriaChanged)="onSortCriteriaChanged($event)"></app-sort-criteria>
